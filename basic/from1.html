@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        from : 다른 from을 자식요소로 사용할수 없음
+        속성 
+        1) ★ action : 경로(전송한 정보를 처리할 웹페이지 url)
+        2) ★ method : get,post 
+        3) autocomplete : 자동완성 사용 여부 (on - default값)
+        4) name : 고유한 양식의 이름
+        5) novalidate : 서버로 데이터 전송시 유효성 검사하지않음
+
+        input type
+        1) text : 문자 한행 입력
+        2) radio : 여러개 중에서 하나선택용으로 사용
+        3) checkbox :value값 필수
+        4) butten
+        5) reset
+        6) submit
+    -->
+    <form action="" method="get" autocomplete="off" name="myForm" novalidate></form>
+    <form action="" method="get">
+        <!-- input -->
+        <div><input type="text" /></div>
+        <div><input type="text" name="" id="" /></div>
+        <div>
+            <input type="radio" name="fruits" id="" />사과<input type="radio" name="fruits" id="" /> 포도
+            <input type="radio" name="fruits" id="" />바나나
+        </div>
+        <div>
+            <input type="checkbox" name="fruits1" id="" /> 사과 <input type="checkbox" name="fruits1" id="" /> 포도
+            <input type="checkbox" name="fruits1" id="" />바나나
+        </div>
+        <div>
+            <input type="button" value="버튼" />
+            <input type="submit" value="submit" />
+
+            <input type="reset" value="reset" />
+        </div>
+        <div>
+            <select name="fruits" id="">
+                <option value="사과">사과</option>
+                <option value="포도">포도</option>
+                <option value="딸기">딸기</option>
+            </select>
+        </div>
+    </form>
+
+</body>
+
+</html>

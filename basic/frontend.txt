@@ -1,0 +1,94 @@
+웹(앱) 개발 : 프론트 / 백엔드 
+ -frontend : html, css, javascript, react, vue...
+ -backend : nede.js, java, python, 닷넷...
+ - 기반기술 : 서버, 네트워크 
+
+
+-frontend 
+ - 브라우저 기반
+  - 브라우저를 통해서 실행될수 있는 언어 
+   1. HTML(HyperText Markup Language)
+     웹 브라우저에서 표시되도록 설계된 표준 마크업 언어 
+     태그
+     화면 구조 설계
+
+   2. CSS(Cascading Style Sheets) : 디자인
+    -css 파일 위치
+     1) head 태그 안 : 길지않다면 : <style>~~~~~~</style>
+     2) inline 처리 : 비추천 : style="color: blueviolet;"
+     3) 외부 파일(추천) : <link rel="stylesheet" href="mycss.css" />
+
+   -디자인을 반영할 요소 선택
+     1) 태그 선택자
+     2) 아이디 : #
+     3) 클래스 : .
+     4) 전체 : *
+     5) 자손(자식) : >, 공백
+     6) 형제선택자
+        1) 인접 형제 : + 
+        2) 모든 형제 : ~
+     
+     7) 그룹 : 선택자1, 선택자2
+          여러 선택자를 한꺼번에 동일한 디자인 적용
+     
+     8) 속성 선택자
+      -[속성명] : [target]
+      -[속성명=값] : [target ="_blank]
+      -[속성명~=값] : [target~="dog"] - 값이 정확히 맞아야함
+      -[속성명^=값] : [class^="dog"]값으로 시작하는
+      -[속성명$=값] : 값으로 끝나는
+      -[속성명*=값] : 값이 포함된
+     
+     9)가상(Pseduo) 클래스 선택자
+      - a target
+       :link
+       :active
+       :visited
+       -다른 요소
+       :hover => 특정 요소에 마우스가 올라간 상황
+       :focus => 특정 요소에 초점이 맞춰진 상황 
+      - ui 변화
+        :disabled
+        :checked => radio,checkbox 요소가 선택된 상황
+     10) 가상 요소 선택자
+        ::before
+        ::after
+     
+     11) 구조 선택자
+        :first-child
+        :last-child
+        :nth-child(3) 
+         n : 0부터 시작
+        :nth-child(2n) => 짝수
+        :nth-child(2n+1) => 홀수
+        :nth-child(-n + 3) => 첫번째~세번째
+          -0 + 3 = 3
+          -1 + 3 = 2
+          -2 + 3 = 1
+          -3 + 3 = 0 (여기서부터는 무시)
+        :nth-child(n + 4) => 4번째 이상부터    
+     
+     12) 형태구조선택자 : 태그명 사용
+        :first-of-type
+        :last-of-type
+        :nth-last-of-type(n)
+     
+     13) 부정 선택자
+         E:not(S) => S가 아닌 E 선택
+
+  - 단위
+   1) px : 고정
+   2) % : 상대 
+   3) em : em 단위가 쓰여진곳의 폰트사이즈 배수
+   4) rem : 루트요소의 크기를 기준으로 함
+   5) vw,wh : viewport width, viewport height 화면 기준
+  
+  - 상속 : 글자와 관련된 속성들이 주로 상속을 가짐
+  - 우선순위 : 
+   1. 명시도 점수가 높은 선언이 우선
+      (!important > 인라인선언 > 아이디 > 클래스 > 태그 > 전체 > 상속)
+   2. 점수가 같은 경우 가장 마지막에 해석되는 선언이 우선
+   3.명시도는 상속규칙보다 우선
+   4. !important 가 적용된 선언방식이 최우선
+
+   

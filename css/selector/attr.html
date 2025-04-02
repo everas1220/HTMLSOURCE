@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* [target] {
+            text-decoration: none;
+        } */
+        [target="_blank"] {
+            text-decoration: none;
+        }
+
+        [title~="dog"] {
+            border: 5xp solid green;
+        }
+
+        [class^="test"] {
+            background: salmon;
+        }
+
+        [class$="test"] {
+            background: magenta;
+        }
+
+        [class*="test"] {
+            background: green;
+        }
+
+        [class~="test"] {
+            background: blue;
+        }
+
+
+        /* font-weigtg:bold, bolder-radius:20px, padding:10px, color */
+        [class^="btn-"] {
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        [class$="success"] {
+            color: green;
+        }
+
+        [class$="danger"] {
+            color: red;
+        }
+    </style>
+
+<body>
+    <ul>
+        <li><a href="#" target="_blank">google</a></li>
+        <li><a href="#" target="_blank">naver</a></li>
+        <li><a href="#" target="_self">daum</a></li>
+    </ul>
+    <img src="../../image/dog.png" alt="" title="pretty dog" />
+    <img src="../../image/dog.png" alt="" title="sound dog" />
+    <img src="../../image/dog.png" alt="" title="no dogs" />
+    <div class="testing">First Div</div>
+    <div class="second_test">Second Div</div>
+    <div class="test">Third Div</div>
+    <div class="test_3x">Fourth Div</div>
+    <button class="btn-success">Success</button>
+    <button class="btn-danger">Danger</button>
+    <button>Normal</button>
+</body>
+
+</html>
