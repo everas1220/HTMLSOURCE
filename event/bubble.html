@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="one">
+        one
+        <div class="two">
+            two
+            <div class="three">three</div>
+        </div>
+    </div>
+    <script>
+        // const divs = document.querySelectorAll("div");
+        // divs.forEach((divs) => {
+        //     div.addEventListerner("click", (e) => {
+        //         // e.target : 실제 이벤트가 발생한 요소
+        //         console.log("e.target", e.target);
+        //         // e.currentTarget : 이벤트버블링으로 이벤트가 발생한 모든 요소
+        //         console.log("e.currentTarget",e.currentTarget);
+        //     });
+        // });
+
+        //이벤트버블링 이용 = 부모만 찾기
+        document.querySelector(".one").addEventListener("click", (e) => console.log(e.target.textContent));
+
+
+
+
+    </script>
+</body>
+
+</html>

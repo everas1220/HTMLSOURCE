@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #p1 {
+            /* display: none; */
+        /* visibility: hidden <==> visible; */
+    </style>
+</head>
+
+<body>
+    <p id="p1">This is a paragraph</p>
+    <button type="button"> 요소 숨김</button>
+    <button type="button"> 요소 노출</button>
+    <script>
+        const btns = document.querySelectorAll("butten");
+        const p1 = document.querySelector("#p1");
+        btns.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                if (e.target.textContent === "요소 숨김") {
+                    p1.style.display = "none";
+                } else {
+                    p1.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="" rel="stylesheet" integrity="sha-384SgOJa3DmI69IUzQ2PVDRZhwQ+DY64/BUtbMJw1MZ"
+        crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">JSShop</span>
+            <span class="badge bg-dark">Dark🔁</span>
+        </div>
+    </nav>
+    <script>
+        // badge 클릭 시 클래스명 변경 bg-dark => bg-warning, 글자색상 검정, Light🔁
+        const badge = document.querySelector(".badge");
+        let mode = true;
+        badge.addEventListener("click", () => {
+
+            if (mode) {
+                badge.classList.replace("bg-dark", "bg-warning");
+                badge.style.color = "black";
+                badge.textContent = "Light 🔁";
+                mode = false;
+            } else {
+                badge.classList.replace("bg-warning", "bg-dark");
+                badge.style.color = "white";
+                badge.textContent = "Dark 🔁";
+                mode = true;
+            }
+        });
+        //                             bg-warning => bg-dark, 글자색상 흰색, Dark🔁
+
+    </script>
+</body>
+
+</html>
