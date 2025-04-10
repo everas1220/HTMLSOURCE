@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <div>
+            <label for="">이름</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="">이름2</label>
+            <input type="text" name="name2" id="name2">
+        </div>
+    </form>
+    <p>입력 필드를 벗어나면 소문자로 변경</p>
+    <script>
+        // change, input,blur
+        const name = document.querySelector("#name")
+        const name2 = document.querySelector("#name2")
+
+        // 사용자가 입력한 값을 가져와서 대문자로 변경후 다시 보여주기
+        name.addEventListener("change", (e) => (e.target.value = e.target.value.toLowerCase()));
+    </script>
+</body>
+
+</html>

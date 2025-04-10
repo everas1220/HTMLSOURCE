@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 알림창 숨기기  */
+        .alert-box {
+            background: skyblue;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+            display: none;
+            margin: 10px;
+            position: relative;
+        }
+
+        button {
+            border: 0;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgb(54, 62, 228);
+            color: white;
+            cursor: pointer;
+        }
+
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            cursor: pointer;
+        }
+
+        /*  */
+    </style>
+</head>
+
+<body>
+    <div class="alert-box">
+        알림창
+        <span class="close">X</span>
+    </div>
+    <button class="show"> 아이디 </button>
+    <button class="show2"> 비밀번호 </button>
+    <script>
+        const alertBox = document.querySelector(".alert-box");
+        // 아이디 클릭시 알림창 => 아이디를 입력해주세요
+        const btns = document.querySelectorAll("button");
+
+        btns[0].addEventListener("click", () => {
+            alertBox.style.display = "block";
+            alertBox.firstChild.nodeValue = "아이디를 입력해주세요";
+            // alertBox.textContent = "아이디를 입력해주세요";
+            // alertBox.innerHTML = '아이디를 입력해주세요<span class="close">X</span>';
+        })
+
+        // 비밀번호 클릭시 알림창 => 비밀번호를 입력해주세요
+        btns[1].addEventListener("click", () => {
+            alertBox.style.display = "block";
+            alertBox.firstChild.nodeValue = "비밀번호를 입력해주세요";
+            // alertBox.textContent = "비밀번호를 입력해주세요";
+            // alertBox.innerHTML = '비밀번호를 입력해주세요<span class="close">X</span>';
+        })
+        // X 누르면 alert-box 닫기
+        document.querySelector(".close").addEventListener('click', () => {
+            document.querySelector(".alert-box").style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
