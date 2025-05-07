@@ -11,5 +11,5 @@
 // ('https://jsonplaceholder.typicode.com/todos/1') 요청
 fetch('https://jsonplaceholder.typicode.com/todos/1')
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => console.log(data));
 // console.log("마무리");
