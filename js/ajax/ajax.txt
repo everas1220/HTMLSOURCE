@@ -1,39 +1,44 @@
-영화진흥위원회 open API
-https://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do
-openAPI 키 (8ceff6515c9dbc671ac617fb0fef4a0f)
-
-서울 열린데이터 광장
-https://data.seoul.go.kr/
-
-공공데이터 포털
-https://www.data.go.kr/
-
 서버와 클라이언트
 
-하드웨어적 서버와
-소프트웨어적 서버 - 리눅스(유닉스), 윈도우즈서버 설치된 서버 
+하드웨어적 서버 
+소프트웨어 서버 - 리눅스(유닉스), 윈도우즈서버 설치된 서버
 
-Ajax(Asynchronous Javascript and XML)
- - 비동기식 자바스크립트와 XML 
-                           XML은 이전에 자주사용하였지만 최근에는 
-                           JSON을 더 자주 사용함
- - 비동기식 요청 처리
-  1) 자바스크립트 코드 
-  2) jQuery 코드 
+
+Ajax(Asynchronous JavaScript and XML)
+- 비동기식 자바스크립트와 XML(JSON)
+- 비동기식 요청 처리
+  1) 자바스크립트 코드
+  2) jQuery 코드
   3) fetch 사용
   4) axios 사용
 
+
 - JSON
-서버와 클라이언트가 주고받는 데이터 형식 
+서버와 클라이언트가 주고받는 데이터 형식
 
- 자바스크립트 객체 
-  {id: 0, price: 70000,title: "Blossom Dress"}
+자바스크립트 객체
+{ id: 0, price: 70000, title: "Blossom Dress" },
 
- JSON(JavaScript Object Notation) : 자바 스크리브 객체 문법으로 
-                        데이터를 표현하기 위한 문자기반의 포맷
-  { 
+JSON(JavaScript Object Notation) : 자바스크립트 객체 문법으로 데이터 표현하기 위한 문자기반의 포맷
+{
+    "name": "Molecule Man",
+    "age": 29,
+    "secretIdentity": "Dan Jukes",
+    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+}
 
+json 배열
+[
+  {
+    "name": "Molecule Man",
+    "age": 29,
+    "secretIdentity": "Dan Jukes",
+    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+  },
+  {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
   }
-
-json 배열 
-
+]
